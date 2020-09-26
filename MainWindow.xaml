@@ -1,0 +1,24 @@
+﻿<Window x:Class="RegistroPrestamo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RegistroPrestamo"
+        mc:Ignorable="d"
+        Title="Menu Principal" Height="410" Width="444">
+    <Grid>
+        <StackPanel>
+            <Menu Height = "20" VerticalAlignment="Top">
+                <MenuItem Header= "Registros">
+                    <MenuItem x:Name="RegistroPersona" Header="Registro Persona" Click="RegistroPersonasButton_Click"></MenuItem>
+                    <MenuItem x:Name="RegistroPrestamo" Header="Registro Prestamo" Click="RegistroPrestamosButton_Click"></MenuItem>
+                </MenuItem>
+
+                <MenuItem Header= "Consultas">
+                    <MenuItem x:Name="ConsultaPersona" Header="Consulta Persona" Click="ConsultaPersonasButton_Click"></MenuItem>
+                    <MenuItem x:Name="ConsultaPrestamo" Header="Consulta Prestamo" Click="ConsultaPrestamosButton_Click"></MenuItem>
+                </MenuItem>
+            </Menu>
+        </StackPanel>            
+    </Grid>
+</Window>
