@@ -25,6 +25,8 @@ namespace RegistroPrestamo.BLL{
             try{
                 //Agregar a la entidad que se desea ingresar al contexto
                 contexto.Prestamo.Add(prestamo);
+                var persona = contexto.Persona.Find(prestamo.PersonaId);
+                persona.Balance += prestamo.Monto;
                 paso = contexto.SaveChanges()>0;
             }
             catch(Exception){

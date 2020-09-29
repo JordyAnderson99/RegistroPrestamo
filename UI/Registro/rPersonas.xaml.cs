@@ -29,6 +29,7 @@ namespace RegistroPrestamo.UI.Registro
         private void Limpiar(){
             this.persona = new Persona();
             this.DataContext= persona;
+            this.persona.Fecha= DateTime.Now;
         }
 
         private bool Validar(){

@@ -18,7 +18,7 @@
 
             <!--PersonaId-->
             <Label Content = "PersonaId" FontWeight="Bold" FontSize="15px" Margin="120,-90,1,1" FontFamily="SimSun-ExtB" FontStyle="Normal"/>
-            <TextBox x:Name = "PersonaIdTextBox" Text ="{Binding PersonaId}" Width="50" Height="25" Margin="10,-150,0,0"/>
+            <ComboBox x:Name = "PersonaIdComboBox" Text ="{Binding PersonaId}" Width="80" Height="25" Margin="40,-150,0,0"/>
         
             <!--Fecha-->
             <Label Content = "Fecha" FontWeight="Bold" FontSize="13.5px" Margin="120,-50,1,1" FontFamily="SimSun-ExtB" FontStyle="Normal"/>

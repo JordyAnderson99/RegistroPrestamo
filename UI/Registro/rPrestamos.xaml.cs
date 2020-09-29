@@ -23,6 +23,9 @@ namespace RegistroPrestamo.UI.Registro
         public rPrestamos()
         {
             InitializeComponent();
+            PersonaIdComboBox.ItemsSource= PersonaBLL.GetList(p =>true);
+            PersonaIdComboBox.SelectedValuePath= "PersonaId";
+            PersonaIdComboBox.DisplayMemberPath="Nombres";
             DataContext= prestamo;
         }
 
