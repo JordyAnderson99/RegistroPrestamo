@@ -35,15 +35,11 @@ namespace RegistroPrestamo.Migrations
 
             modelBuilder.Entity("RegistroPrestamo.Entidades.MorasDetalle", b =>
                 {
-                    b.Property<int>("DetalleId")
-                        .ValueGeneratedOnAdd()
+                    b.Property<int>("MoraId")
                         .HasColumnType("INTEGER");
 
                     b.Property<DateTime>("Fecha")
                         .HasColumnType("TEXT");
-
-                    b.Property<int>("MoraId")
-                        .HasColumnType("INTEGER");
 
                     b.Property<int>("PrestamoId")
                         .HasColumnType("INTEGER");
@@ -51,9 +47,7 @@ namespace RegistroPrestamo.Migrations
                     b.Property<decimal>("Valor")
                         .HasColumnType("TEXT");
 
-                    b.HasKey("DetalleId");
-
-                    b.HasIndex("MoraId");
+                    b.HasKey("MoraId");
 
                     b.ToTable("MorasDetalle");
                 });

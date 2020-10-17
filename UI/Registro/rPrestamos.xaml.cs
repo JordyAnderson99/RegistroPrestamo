@@ -26,6 +26,7 @@ namespace RegistroPrestamo.UI.Registro
             PersonaIdComboBox.ItemsSource= PersonaBLL.GetList(p =>true);
             PersonaIdComboBox.SelectedValuePath= "PersonaId";
             PersonaIdComboBox.DisplayMemberPath="Nombres";
+            prestamo.Monto += prestamo.Balance;
             this.DataContext= prestamo;
         }
 
@@ -66,18 +67,10 @@ namespace RegistroPrestamo.UI.Registro
 
         private void GuardarButton_Click(object sender, RoutedEventArgs e){
             
-            //var persona = PersonaBLL.Buscar(Convert.ToInt32(PersonaIdComboBox.SelectedIndex));
             if(!Validar()){
                 return;
             }
-            /*if (persona != null)
-            {
-                BalanceTextBox.Text = Convert.ToString(persona.Balance);
-                decimal balance = Convert.ToDecimal(BalanceTextBox.Text) + Convert.ToDecimal(MontoTextBox.Text);
-                persona.Balance = balance;
-                PersonaBLL.Guardar(persona);
-                this.DataContext = prestamo;
-                */
+            
                 var paso = PrestamoBLL.Guardar(prestamo);
                 if(paso){
                 Limpiar();
@@ -87,7 +80,7 @@ namespace RegistroPrestamo.UI.Registro
                 MessageBox.Show("Transaccion Fallida", "Fallo",  MessageBoxButton.OK, MessageBoxImage.Error);
                 }
 
-            //}
+            
         }
 
         private void EliminarButton_Click(object sender, RoutedEventArgs e){

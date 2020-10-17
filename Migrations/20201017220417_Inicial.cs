@@ -57,8 +57,6 @@ namespace RegistroPrestamo.Migrations
                 name: "MorasDetalle",
                 columns: table => new
                 {
-                    DetalleId = table.Column<int>(nullable: false)
-                        .Annotation("Sqlite:Autoincrement", true),
                     MoraId = table.Column<int>(nullable: false),
                     PrestamoId = table.Column<int>(nullable: false),
                     Fecha = table.Column<DateTime>(nullable: false),
@@ -66,7 +64,7 @@ namespace RegistroPrestamo.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_MorasDetalle", x => x.DetalleId);
+                    table.PrimaryKey("PK_MorasDetalle", x => x.MoraId);
                     table.ForeignKey(
                         name: "FK_MorasDetalle_Moras_MoraId",
                         column: x => x.MoraId,
@@ -74,11 +72,6 @@ namespace RegistroPrestamo.Migrations
                         principalColumn: "MoraId",
                         onDelete: ReferentialAction.Cascade);
                 });
-
-            migrationBuilder.CreateIndex(
-                name: "IX_MorasDetalle_MoraId",
-                table: "MorasDetalle",
-                column: "MoraId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)

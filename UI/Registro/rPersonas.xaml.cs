@@ -20,6 +20,7 @@ namespace RegistroPrestamo.UI.Registro
     public partial class rPersonas : Window
     {
         Persona persona = new Persona();
+        Prestamo prestamo = new Prestamo();
         public rPersonas()
         {
             InitializeComponent();
@@ -29,6 +30,7 @@ namespace RegistroPrestamo.UI.Registro
         private void Limpiar(){
             this.persona = new Persona();
             this.DataContext= persona;
+            prestamo.Monto += persona.Balance;
             this.persona.Fecha= DateTime.Now;
         }
 

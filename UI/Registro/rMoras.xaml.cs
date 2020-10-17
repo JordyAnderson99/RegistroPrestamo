@@ -20,12 +20,14 @@ namespace RegistroPrestamo.UI.Registro
     public partial class rMoras : Window
     {
         private Moras moras = new Moras();
+        private MorasDetalle morasDetalle = new MorasDetalle();
         public rMoras()
         {
             InitializeComponent();
             PrestamoIdComboBox.ItemsSource= PersonaBLL.GetList(p =>true);
-            PrestamoIdComboBox.SelectedValuePath= "PersonaId";
+            PrestamoIdComboBox.SelectedValuePath= "PrestamosId";
             PrestamoIdComboBox.DisplayMemberPath="Nombres";
+            moras.Total += morasDetalle.Valor ;
             this.DataContext= moras;
         }
 
@@ -47,7 +49,17 @@ namespace RegistroPrestamo.UI.Registro
                 esValido = false;
                 MessageBox.Show("Transaccion Fallida" , "Fallo", 
                 MessageBoxButton.OK, MessageBoxImage.Warning);
+
+                if (morasDetalle.PrestamoId == 0)
+                {
+                    MessageBox.Show("No puede dejar el campo PrestamoId Vacio", "ERROR", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+                if (morasDetalle.Valor == 0)
+                {
+                    MessageBox.Show("No puede dejar el campo Valor Vacio", "ERROR", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
             }
+            
 
             return esValido;
         }
@@ -98,12 +110,11 @@ namespace RegistroPrestamo.UI.Registro
 
         private void AgregarFilaButton_Click(object sender, RoutedEventArgs e)
         {
-            var filaDetalle = new MorasDetalle(Convert.ToInt32(DetalleIdTextBox.Text), moras.MoraId, Convert.ToInt32(PrestamoIdComboBox.Text), FechaDatePicker.DisplayDate, Convert.ToInt32(ValorTextBox.Text));
+            var filaDetalle = new MorasDetalle(moras.MoraId, Convert.ToInt32(PrestamoIdComboBox.Text), FechaDatePicker.DisplayDate, Convert.ToInt32(ValorTextBox.Text));
 
             moras.Detalle.Add(filaDetalle);
             Cargar();
-
-            DetalleIdTextBox.Clear();
+                        
             ValorTextBox.Clear();
         }
 
