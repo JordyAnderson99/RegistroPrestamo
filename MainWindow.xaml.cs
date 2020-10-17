@@ -38,6 +38,11 @@ namespace RegistroPrestamo
             rPres.Show();
         }
 
+        private void RegistroMorasButton_Click(object sender, RoutedEventArgs e){
+           rMoras moras = new rMoras();
+            moras.Show();
+        }
+
         private void ConsultaPersonasButton_Click(object sender, RoutedEventArgs e){
            cPersonas cp = new cPersonas();
             cp.Show();

@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\DELL\source\repos\RegistroPrestamo\obj\Debug\netcoreapp3.1\
+c:\Users\DELL\source\repos\RegistroPrestamo\obj\Debug\netcoreapp3.1\
 RegistroPrestamo
 none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1
-C:\Users\DELL\source\repos\RegistroPrestamo\App.xaml
-5997980152
-4-1754720526
-16-502251739
-2161902916143
-MainWindow.xaml;UI\Consulta\cPersonas.xaml;UI\Consulta\cPrestamos.xaml;UI\Registro\rPersonas.xaml;UI\Registro\rPrestamos.xaml;
+c:\Users\DELL\source\repos\RegistroPrestamo\App.xaml
+635058618
+6-1480050725
+21-1589436395
+216-694148410
+MainWindow.xaml;UI\Consulta\cPersonas.xaml;UI\Consulta\cPrestamos.xaml;UI\Registro\rMoras.xaml;UI\Registro\rPersonas.xaml;UI\Registro\rPrestamos.xaml;
 
 False
 

@@ -13,16 +13,16 @@
             <TextBox x:Name = "PrestamoIdTextBox" Text ="{Binding PrestamoId}" Width="50" Height="25" Margin="10,-225,0,0"/>
             
             <!--Boton Buscar-->
-            <Button x:Name ="BuscarButton" Margin="240,-225,0,0" Width = "120" Height = "40" Content="     Buscar" Click="BuscarButton_Click"/>
+            <Button x:Name ="BuscarButton" Margin="240,-225,0,0" Width = "120" Height = "40" Content="     Buscar" Click="BuscarButton_Click" FontWeight="Bold"/>
             <Image Source= "/Imagenes/Buscar.png" Width="30" Height= "30" Margin="160,-225,0,0"/>
 
             <!--PersonaId-->
             <Label Content = "PersonaId" FontWeight="Bold" FontSize="15px" Margin="120,-90,1,1" FontFamily="SimSun-ExtB" FontStyle="Normal"/>
-            <ComboBox x:Name = "PersonaIdComboBox" Text ="{Binding PersonaId}" Width="80" Height="25" Margin="40,-150,0,0"/>
+            <ComboBox x:Name = "PersonaIdComboBox" SelectedValue ="{Binding PersonaId}" Width="80" Height="25" Margin="40,-150,0,0"/>
         
             <!--Fecha-->
             <Label Content = "Fecha" FontWeight="Bold" FontSize="13.5px" Margin="120,-50,1,1" FontFamily="SimSun-ExtB" FontStyle="Normal"/>
-            <DatePicker x:Name = "FechaDatePicker" Text ="{Binding Fecha}" Width="190" Height="30" Margin="150,-80,0,0"/>
+            <DatePicker x:Name = "FechaDatePicker" SelectedDate ="{Binding Fecha}" Width="190" Height="30" Margin="150,-80,0,0"/>
             
             <!--Concepto-->
              <Label Content = "Concepto" FontWeight="Bold" FontSize="15px" Margin="120,-10,1,1" FontFamily="SimSun-ExtB" FontStyle="Normal"/>
@@ -34,19 +34,19 @@
 
             <!--Balance-->
             <Label Content = "Balance" FontWeight="Bold" FontSize="15px" Margin="120,10,1,1" FontFamily="SimSun-ExtB" FontStyle="Normal"/>
-            <TextBox x:Name = "BalanceTextBox" Text ="{Binding Balance}" Width="190" Height="27" Margin="150,-30,0,0"/>
+            <TextBox x:Name = "BalanceTextBox" Text ="{Binding Balance}" Width="190" Height="27" Margin="150,-30,0,0" IsEnabled= "false"/>
 
             
             <!-- Boton Nuevo-->
-            <Button x:Name ="NuevoButton" Margin="-120,20,0,0" Width = "100" Height = "40" Content="        Nuevo"  Click="NuevoButton_Click"/>
+            <Button x:Name ="NuevoButton" Margin="-120,20,0,0" Width = "100" Height = "40" Content="        Nuevo"  Click="NuevoButton_Click" FontWeight="Bold"/>
             <Image Source= "/Imagenes/Nuevo.png" Width="40" Height= "40" Margin="-180,-40,0,0"/>
 
             <!-- Boton Guardar-->
-            <Button x:Name ="GuardarButton" Margin="140,-40,0,0" Width = "100" Height = "40" Content="        Guardar"  Click="GuardarButton_Click"/>
+            <Button x:Name ="GuardarButton" Margin="140,-40,0,0" Width = "100" Height = "40" Content="        Guardar"  Click="GuardarButton_Click" FontWeight="Bold"/>
             <Image Source= "/Imagenes/Guardar.jpg" Width="35" Height= "35" Margin="80,-40,0,0"/>
 
             <!--Boton Eliminar-->
-            <Button x:Name ="EliminarButton" Margin="390,-40,0,0" Width = "100" Height = "40" Content="          Eliminar"  Click="EliminarButton_Click"/>
+            <Button x:Name ="EliminarButton" Margin="390,-40,0,0" Width = "100" Height = "40" Content="          Eliminar"  Click="EliminarButton_Click" FontWeight="Bold"/>
             <Image Source= "/Imagenes/Eliminar.png" Width="40" Height= "40" Margin="330,-40,0,0"/>
         </StackPanel>
     </Grid>

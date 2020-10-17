@@ -36,7 +36,7 @@ namespace RegistroPrestamo.UI.Registro
             bool esValido = true;
 
             if(NombresTextBox.Text.Length ==0){
-                esValido = true;
+                esValido = false;
                 MessageBox.Show("Transaccion Fallida" , "Fallo", 
                 MessageBoxButton.OK, MessageBoxImage.Warning);
             }

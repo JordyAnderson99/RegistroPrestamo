@@ -12,6 +12,7 @@
                 <MenuItem Header= "Registros">
                     <MenuItem x:Name="RegistroPersona" Header="Registro Persona" Click="RegistroPersonasButton_Click"></MenuItem>
                     <MenuItem x:Name="RegistroPrestamo" Header="Registro Prestamo" Click="RegistroPrestamosButton_Click"></MenuItem>
+                    <MenuItem x:Name="RegistroMoras" Header="Registro Moras" Click="RegistroMorasButton_Click"></MenuItem>
                 </MenuItem>
 
                 <MenuItem Header= "Consultas">

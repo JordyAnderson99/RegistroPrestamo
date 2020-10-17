@@ -53,11 +53,9 @@ C:\Users\DELL\source\repos\RegistroPrestamo\obj\Debug\netcoreapp3.1\MainWindow.b
 C:\Users\DELL\source\repos\RegistroPrestamo\obj\Debug\netcoreapp3.1\RegistroPrestamo.g.resources
 C:\Users\DELL\source\repos\RegistroPrestamo\obj\Debug\netcoreapp3.1\RegistroPrestamo.AssemblyInfoInputs.cache
 C:\Users\DELL\source\repos\RegistroPrestamo\obj\Debug\netcoreapp3.1\RegistroPrestamo.AssemblyInfo.cs
-C:\Users\DELL\source\repos\RegistroPrestamo\obj\Debug\netcoreapp3.1\RegistroPrestamo.csproj.CoreCompileInputs.cache
 C:\Users\DELL\source\repos\RegistroPrestamo\obj\Debug\netcoreapp3.1\RegistroPrestamo.csproj.CopyComplete
 C:\Users\DELL\source\repos\RegistroPrestamo\obj\Debug\netcoreapp3.1\RegistroPrestamo.dll
 C:\Users\DELL\source\repos\RegistroPrestamo\obj\Debug\netcoreapp3.1\RegistroPrestamo.pdb
-C:\Users\DELL\source\repos\RegistroPrestamo\obj\Debug\netcoreapp3.1\RegistroPrestamo.genruntimeconfig.cache
 C:\Users\DELL\source\repos\RegistroPrestamo\obj\Debug\netcoreapp3.1\UI\Registro\rPersonas.g.cs
 C:\Users\DELL\source\repos\RegistroPrestamo\obj\Debug\netcoreapp3.1\UI\Registro\rPersonas.baml
 C:\Users\DELL\source\repos\RegistroPrestamo\obj\Debug\netcoreapp3.1\UI\Registro\rPrestamos.g.cs
@@ -71,3 +69,9 @@ C:\Users\DELL\source\repos\RegistroPrestamo\bin\Debug\netcoreapp3.1\Imagenes\Eli
 C:\Users\DELL\source\repos\RegistroPrestamo\bin\Debug\netcoreapp3.1\Imagenes\Guardar.jpg
 C:\Users\DELL\source\repos\RegistroPrestamo\bin\Debug\netcoreapp3.1\Imagenes\Nuevo.png
 C:\Users\DELL\source\repos\RegistroPrestamo\obj\Debug\netcoreapp3.1\RegistroPrestamo_Content.g.cs
+C:\Users\DELL\source\repos\RegistroPrestamo\obj\Debug\netcoreapp3.1\UI\Registro\rMoras.g.cs
+C:\Users\DELL\source\repos\RegistroPrestamo\obj\Debug\netcoreapp3.1\UI\Registro\rMoras.baml
+C:\Users\DELL\source\repos\RegistroPrestamo\bin\Debug\netcoreapp3.1\Imagenes\Mas.png
+C:\Users\DELL\source\repos\RegistroPrestamo\bin\Debug\netcoreapp3.1\Imagenes\Menos.png
+C:\Users\DELL\source\repos\RegistroPrestamo\obj\Debug\netcoreapp3.1\RegistroPrestamo.csproj.CoreCompileInputs.cache
+C:\Users\DELL\source\repos\RegistroPrestamo\obj\Debug\netcoreapp3.1\RegistroPrestamo.genruntimeconfig.cache

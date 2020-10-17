@@ -9,7 +9,7 @@ using RegistroPrestamo.DAL;
 namespace RegistroPrestamo.Migrations
 {
     [DbContext(typeof(Contexto))]
-    [Migration("20200924054041_Inicial")]
+    [Migration("20201016031539_Inicial")]
     partial class Inicial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -17,6 +17,48 @@ namespace RegistroPrestamo.Migrations
 #pragma warning disable 612, 618
             modelBuilder
                 .HasAnnotation("ProductVersion", "3.1.8");
+
+            modelBuilder.Entity("RegistroPrestamo.Entidades.Moras", b =>
+                {
+                    b.Property<int>("MoraId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<DateTime>("Fecha")
+                        .HasColumnType("TEXT");
+
+                    b.Property<decimal>("Total")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("MoraId");
+
+                    b.ToTable("Moras");
+                });
+
+            modelBuilder.Entity("RegistroPrestamo.Entidades.MorasDetalle", b =>
+                {
+                    b.Property<int>("DetalleId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<DateTime>("Fecha")
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("MoraId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("PrestamoId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<decimal>("Valor")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("DetalleId");
+
+                    b.HasIndex("MoraId");
+
+                    b.ToTable("MorasDetalle");
+                });
 
             modelBuilder.Entity("RegistroPrestamo.Entidades.Persona", b =>
                 {
@@ -62,6 +104,15 @@ namespace RegistroPrestamo.Migrations
                     b.HasKey("PrestamoId");
 
                     b.ToTable("Prestamo");
+                });
+
+            modelBuilder.Entity("RegistroPrestamo.Entidades.MorasDetalle", b =>
+                {
+                    b.HasOne("RegistroPrestamo.Entidades.Moras", null)
+                        .WithMany("Detalle")
+                        .HasForeignKey("MoraId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }
