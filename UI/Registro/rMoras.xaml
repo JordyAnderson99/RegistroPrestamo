@@ -51,11 +51,11 @@
                             
                         </StackPanel>
 
-                        <DataGrid x:Name="DetalleDataGrid" Height="100" AutoGenerateColumns="False" ItemsSource="{Binding Detalle}" Margin="0,10,0,0">
+                        <DataGrid x:Name="DetalleDataGrid" IsReadOnly="true" Height="100" AutoGenerateColumns="False" ItemsSource="{Binding Detalle}" Margin="0,10,0,0">
                             <DataGrid.Columns>                                
-                                <DataGridTextColumn Header="PrestamoId" Binding="{Binding PrestamoId}"/>
-                                <DataGridTextColumn Header="MoraId" Binding="{Binding MoraId}"/>
-                                <DataGridTextColumn Header="Valor" Binding="{Binding Valor}"/>                                
+                                <DataGridTextColumn Header="               PrestamoId               " Binding="{Binding PrestamoId}"/>
+                                <DataGridTextColumn Header="               MoraId                   " Binding="{Binding MoraId}"/>
+                                <DataGridTextColumn Header="                Valor                    " Binding="{Binding Valor}"/>                                
                             </DataGrid.Columns>
                         </DataGrid>
                         
@@ -65,7 +65,7 @@
                 <StackPanel Orientation="Horizontal">
                     <!--Total-->
                     <Label Content="Total" Margin="340,15,0,0" FontSize="15px" FontFamily="SimSun-ExtB"/>
-                    <TextBox x:Name="TotalTextBox" Height="25" Width="60" Margin="8,15,0,0"/>
+                    <TextBox x:Name="TotalTextBox" Text= "{Binding Total}" Height="25" Width="60" Margin="8,15,0,0"/>
                 </StackPanel>
             </StackPanel>
 

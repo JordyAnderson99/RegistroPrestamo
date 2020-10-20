@@ -20,7 +20,7 @@ namespace RegistroPrestamo.UI.Registro
     public partial class rMoras : Window
     {
         private Moras moras = new Moras();
-        private MorasDetalle morasDetalle = new MorasDetalle();
+        
         public rMoras()
         {
             InitializeComponent();
@@ -108,7 +108,7 @@ namespace RegistroPrestamo.UI.Registro
 
         private void AgregarFilaButton_Click(object sender, RoutedEventArgs e)
         {
-            var filaDetalle = new MorasDetalle(moras.MoraId, Convert.ToInt32(PrestamoIdComboBox.SelectedValue), FechaDatePicker.DisplayDate, Convert.ToInt32(ValorTextBox.Text));
+            var filaDetalle = new MorasDetalle(moras.MoraId, Convert.ToInt32(PrestamoIdComboBox.SelectedIndex+1), FechaDatePicker.DisplayDate, Convert.ToInt32(ValorTextBox.Text));
 
             moras.Detalle.Add(filaDetalle);
             Cargar();
