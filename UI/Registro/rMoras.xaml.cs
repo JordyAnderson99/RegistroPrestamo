@@ -24,10 +24,9 @@ namespace RegistroPrestamo.UI.Registro
         public rMoras()
         {
             InitializeComponent();
-            PrestamoIdComboBox.ItemsSource= PersonaBLL.GetList(p =>true);
+            PrestamoIdComboBox.ItemsSource= PrestamoBLL.GetList(p =>true);
             PrestamoIdComboBox.SelectedValuePath= "PrestamosId";
-            PrestamoIdComboBox.DisplayMemberPath="Nombres";
-            moras.Total += morasDetalle.Valor ;
+            PrestamoIdComboBox.DisplayMemberPath="PrestamoId";            
             this.DataContext= moras;
         }
 
@@ -45,30 +44,29 @@ namespace RegistroPrestamo.UI.Registro
         private bool Validar(){
             bool esValido = true;
 
-            if(ValorTextBox.Text.Length ==0){
+            if(PrestamoIdComboBox.Text.Length ==0){
                 esValido = false;
                 MessageBox.Show("Transaccion Fallida" , "Fallo", 
                 MessageBoxButton.OK, MessageBoxImage.Warning);
+                                
+            }            
+            /*else if (ValorTextBox.Text.Length == 0)
+            {
+                esValido = false;
+                MessageBox.Show("Ha ocurrido un error, Inserte el prestamo", "ERROR",
+                    MessageBoxButton.OK, MessageBoxImage.Warning);
+            }*/
 
-                if (morasDetalle.PrestamoId == 0)
-                {
-                    MessageBox.Show("No puede dejar el campo PrestamoId Vacio", "ERROR", MessageBoxButton.OK, MessageBoxImage.Error);
-                }
-                if (morasDetalle.Valor == 0)
-                {
-                    MessageBox.Show("No puede dejar el campo Valor Vacio", "ERROR", MessageBoxButton.OK, MessageBoxImage.Error);
-                }
-            }
-            
 
             return esValido;
         }
 
         private void BuscarButton_Click(object sender, RoutedEventArgs e){
-              var moras = MorasBLL.Buscar(Utilidades.ToInt(MoraIdTextBox.Text));
+              var moras = MorasBLL.Buscar(this.moras.MoraId);
 
             if(moras != null){
                     this.moras = moras;
+                Cargar();
             }
             else{
                     this.moras = new Moras();
@@ -110,7 +108,7 @@ namespace RegistroPrestamo.UI.Registro
 
         private void AgregarFilaButton_Click(object sender, RoutedEventArgs e)
         {
-            var filaDetalle = new MorasDetalle(moras.MoraId, Convert.ToInt32(PrestamoIdComboBox.Text), FechaDatePicker.DisplayDate, Convert.ToInt32(ValorTextBox.Text));
+            var filaDetalle = new MorasDetalle(moras.MoraId, Convert.ToInt32(PrestamoIdComboBox.SelectedValue), FechaDatePicker.DisplayDate, Convert.ToInt32(ValorTextBox.Text));
 
             moras.Detalle.Add(filaDetalle);
             Cargar();

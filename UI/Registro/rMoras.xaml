@@ -9,14 +9,16 @@
     <Grid Height="440">
         <StackPanel Margin= "46,0,0,0"  VerticalAlignment="Center" HorizontalAlignment="Left"  Width="500" Height="650">
             <!--MoraId-->
-            <Label Content = "MoraId" FontSize="15px" Margin="-380,125,1,1" FontFamily="SimSun-ExtB" FontStyle="Normal" Width="90"/>
+            <Label Content = "MoraId" FontSize="15px" Margin="-390,125,1,1" FontFamily="SimSun-ExtB" FontStyle="Normal" Width="90"/>
             <TextBox x:Name = "MoraIdTextBox" Text ="{Binding MoraId}" Width="50" Height="25" Margin="-220,-25,0,0"/>
 
             <!--Boton Buscar-->
             <Button x:Name ="BuscarButton" Margin="210,-40,0,0" Width = "120" Height = "40" Content="     Buscar" Click="BuscarButton_Click" FontWeight="Bold"/>
             <Image Source= "/Imagenes/Buscar.png" Width="30" Height= "30" Margin="140,-40,0,0"/>
 
-
+            <!--Fecha-->
+            <Label Content = "Fecha" FontSize="13.5px" Margin="-430,10,0,0" FontFamily="SimSun-ExtB" FontStyle="Normal" Width="48" Height="24"/>
+            <DatePicker x:Name = "FechaDatePicker" SelectedDate ="{Binding Fecha}" Width="160" Height="25" Margin="-110,-20,0,0"/>
 
             <StackPanel Orientation="Vertical" >
                 <GroupBox Header="Detalle Moras" Margin="0,5,0,0">
@@ -30,11 +32,7 @@
                         <Label Content = "Valor"  FontSize="15px" Margin="230,-25,1,1" FontFamily="SimSun-ExtB" FontStyle="Normal"/>
                         <TextBox x:Name = "ValorTextBox" Text ="{Binding Valor}" Width="100" Height="25" Margin="190,-25,0,0"/>
 
-                        <!--Fecha-->
-                        <Label Content = "Fecha" FontSize="13.5px" Margin="-430,0,0,0" FontFamily="SimSun-ExtB" FontStyle="Normal" Width="48"/>
-                        <DatePicker x:Name = "FechaDatePicker" SelectedDate ="{Binding Fecha}" Width="160" Height="25" Margin="-110,-20,0,0"/>
-
-
+                        
                         <StackPanel Orientation="Horizontal">
                             <!--Agregar Fila-->                            
                             <Button x:Name="AgregarFilaButton" Margin="5,10,0,0" Click="AgregarFilaButton_Click">
@@ -57,7 +55,7 @@
                             <DataGrid.Columns>                                
                                 <DataGridTextColumn Header="PrestamoId" Binding="{Binding PrestamoId}"/>
                                 <DataGridTextColumn Header="MoraId" Binding="{Binding MoraId}"/>
-                                <DataGridTextColumn Header="Fecha" Binding="{Binding Fecha}"/>                                
+                                <DataGridTextColumn Header="Valor" Binding="{Binding Valor}"/>                                
                             </DataGrid.Columns>
                         </DataGrid>
                         
